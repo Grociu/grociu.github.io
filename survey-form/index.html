@@ -1,0 +1,156 @@
+<html>
+    
+    <style>
+        
+        body {
+            background-color: black;
+            background-image: url("img/ants.jpg"); /* fallback for older browsers */
+            background-image: linear-gradient(to bottom, rgba(134, 134, 134, 0.6) 0%,rgba(134, 134, 134, 0.6) 100%), url("img/ants.jpg");
+            background-repeat: no-repeat;
+            background-origin: center;
+            background-clip: center;
+            background-attachment: fixed;
+            background-size: cover;
+            color: gold;
+        }
+
+        #full-form {
+            display: flex;
+            flex-direction: column;
+            background: rgba(0, 0, 0, 0.6);
+            position: relative;
+            top: 40px;
+            bottom: 40px;
+            width: 500px;
+            margin: auto;
+            border-radius: 30px;
+            align-items: center;
+        }
+
+        #description {
+            margin: 20px 50px 20px 50px;
+        }
+        
+        #anthill-type-choice {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        #attractions-survey {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        #name {
+            margin-top: 20px;
+        }
+
+        #email {
+            margin-top: 20px;
+        }
+
+        #number {
+            margin-top: 20px;
+        }
+
+        #dropdown {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        #comment {
+            width: 400px;
+            height: 100px;
+            resize: vertical;
+        }
+
+        #textarea {
+            display: flex;
+            flex-direction: column;
+        }
+
+    </style>
+    
+    <body>
+        <section id="full-form">
+        <h1 id="title">Ant Lovers Convention Survey</h1>
+        <p id="description">In this survey, we're asking each participant a few questions related to their experience at this year's <b>AntCon</b>. We will use this information to expand our offerings next time!</p> 
+        <form id="survey-form">
+            
+            <label for="name" id="name-label">My Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            <br>
+            <label for="email" id="email-label">My Contact E-mail:</label>
+            <input type="email" id="email" name="email"  placeholder="Enter your e-mail" required>
+            <br>
+            <label for="number" id="number-label">What's your age?</label>
+            <input type="number" id="number" name="number" min="12" max="125" placeholder="Enter your age" required>
+            <br>
+            <label for="dropdown" id="dropdown-label">My Preferred Ant Type:</label>
+            <select id="dropdown" name="prefered-ant">
+                <option value="carpenter-ant">Carpenter Ant</option>
+                <option value="odorous-house-ant">Odorous House Ant</option>
+                <option value="pavement-ant">Pavement Ant</option>
+            </select>
+            <br>
+            <label id="ath-label" for="anthill-type-choice">My colony is:</label> 
+            <div id="anthill-type-choice">
+            <label for="radio1">
+                <input type="radio" id="radio1" name="anthill-type" value="antfarm"> A proper antfarm
+            </label>
+            <label for="radio2">
+                <input type="radio" id="radio2" name="anthill-type" value="aquarium"> An aquarium
+            </label> 
+            <label for="radio3">
+                <input type="radio" id="radio3" name="anthill-type" value="anthill"> A garden anthill
+            </label> 
+            <label for="radio4">
+                <input type="radio" id="radio4" name="anthill-type" value="loose-ants"> Just some loose ants
+            </label>
+            </div>
+            <br>
+            <label for="attractions-survey">At AntCon 2020 I liked the following attractions:</label> 
+            <div id="attractions-survey">
+            <label for="checkbox1">
+                <input type="checkbox" id="checkbox1" name="attractions-survey" value="quiz"> Ants Quiz
+            </label>
+            <label for="checkbox2">
+                <input type="checkbox" id="checkbox2" name="attractions-survey" value="vendor"> Ant Food Vendors
+            </label>
+            <label for="checkbox3">
+                <input type="checkbox" id="checkbox3" name="attractions-survey" value="queen"> Meet the Queen
+            </label>
+            <label for="checkbox4">
+                <input type="checkbox" id="checkbox4" name="attractions-survey" value="army"> Join the Army (Ants)!
+            </label>
+            <label for="checkbox5">
+                <input type="checkbox" id="checkbox5" name="attractions-survey" value="build"> Build an Anthill Workshop!
+            </label>
+            <label for="checkbox6">
+                <input type="checkbox" id="checkbox6" name="attractions-survey" value="doom"> Six Legs Of Doom!
+            </label>
+            <label for="checkbox7">
+                <input type="checkbox" id="checkbox7" name="attractions-survey" value="larvae"> Raising and Caring for Larvae
+            </label>
+            <label for="checkbox8">
+                <input type="checkbox" id="checkbox8" name="attractions-survey" value="anteaters"> How to Avoid Anteaters
+            </label>
+            <label for="checkbox9">
+                <input type="checkbox" id="checkbox9" name="attractions-survey" value="teamwork"> Teamwork Seminar
+            </label>
+            <label for="checkbox10">
+                <input type="checkbox" id="checkbox10" name="attractions-survey" value="lift"> Weighlifting Done Right!
+            </label>
+            </div>
+            <br>
+            <div id="textarea">
+            <label for="comment">I have these additional comments: </label>
+            <textarea id="comment" form="survey-form" placeholder="Enter your comments"></textarea>
+            <br>
+            </div>
+            <button id="submit">Submit</button>
+        </form>
+        </section>
+    </body>
+    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+</html>
